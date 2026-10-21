@@ -1,0 +1,70 @@
+{
+  "name": "@kimposoft/ui-kit",
+  "version": "1.1.0-tp.2",
+  "description": "Kimpo 组件库：KDialog / KDialogFooter / KLayerStack / KControlSize 等 Vue 3 + Naive UI 组件；以 TypeScript / Vue SFC 源码发布（exports 指向 src），需用能编译 TS 与 .vue 的构建工具（如 vite + @vitejs/plugin-vue）",
+  "license": "Apache-2.0",
+  "author": "金宝量行（无锡）软件有限公司",
+  "homepage": "https://github.com/kimposoft/ui-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimposoft/ui-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kimposoft/ui-kit/issues"
+  },
+  "keywords": [
+    "kimpo",
+    "vue",
+    "vue3",
+    "naive-ui"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.vue"
+  ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./src/*"
+      ]
+    }
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "build": "vite build",
+    "scan": "node scripts/release/scan-internal.mjs"
+  },
+  "peerDependencies": {
+    "naive-ui": "^2",
+    "vue": "^3"
+  },
+  "files": [
+    "src",
+    "!src/**/*.spec.ts",
+    "!src/**/*.test.ts",
+    "!src/**/__tests__",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/node": "25.5.0",
+    "@vitejs/plugin-vue": "6.0.5",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^20.9.0",
+    "naive-ui": "2.44.1",
+    "typescript": "6.0.2",
+    "vite": "8.0.3",
+    "vitest": "^4.1.4",
+    "vue": "3.5.31",
+    "vue-tsc": "3.2.6"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "next"
+  }
+}

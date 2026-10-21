@@ -1,0 +1,6 @@
+{
+  "$comment": "发布前内容复扫例外清单。字段说明见 scan-internal.mjs 头注释。keep = 合理保留；deferred = 应清理但本轮不能改，--strict 时视为失败；public-name = 改名即破坏性变更的公开接口名登记（扫描器只核对名字仍存在，不参与命中豁免）。",
+  "entries": [
+    { "kind": "keep", "path": "scripts/release/**", "reason": "复扫脚本与例外清单本身：通用规则里必须写出被查的路径与密钥样式" }
+  ]
+}
